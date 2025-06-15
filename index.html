@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Warkop Santuy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+    .horizontal-sections {
+      display: flex;
+      flex-direction: row;
+      width: 300vw;
+      transition: transform 0.6s ease-in-out;
+    }
+    .section {
+      width: 100vw;
+      height: 100vh;
+      flex-shrink: 0;
+      overflow-y: auto;
+    }
+    .nav-link {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+  <!-- Navbar -->
+  <header class="bg-green-900 text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold flex items-center gap-2">☕ <span>Warkop Santuy</span></h1>
+      <nav class="space-x-6">
+        <span class="nav-link hover:underline hover:text-yellow-300" onclick="scrollToSection(0)">Beranda</span>
+        <span class="nav-link hover:underline hover:text-yellow-300" onclick="scrollToSection(1)">Menu</span>
+        <span class="nav-link hover:underline hover:text-yellow-300" onclick="scrollToSection(2)">Kontak</span>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Horizontal Sections -->
+  <div id="horizontalContainer" class="horizontal-sections">
+
+    <!-- Beranda -->
+    <section id="beranda" class="section bg-cover bg-center text-white py-28" style="background-image: url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=80');">
+      <div class="bg-green-950 bg-opacity-70 max-w-3xl mx-auto text-center rounded-xl py-12 px-6 mt-24">
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">Selamat Datang di Warkop Santuy</h2>
+        <p class="text-lg md:text-xl">Tempat nongkrong santai di alam terbuka sambil menyeruput kopi hangat dan menikmati camilan favoritmu.</p>
+      </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="section bg-gray-800 py-20 text-gray-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-yellow-400 mb-12">🍃 Menu Kami</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+
+          <!-- Item Menu -->
+          <div class="bg-gray-700 p-6 rounded-xl shadow hover:shadow-xl transition duration-300 text-center border border-green-900">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400" alt="Kopi Hitam" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-semibold text-yellow-300 mb-2">Kopi Hitam</h3>
+            <p class="text-gray-300 mb-2">Kopi tubruk panas khas warkop, aromatik dan nikmat.</p>
+            <span class="text-lg font-bold text-yellow-400">Rp8.000</span>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-xl shadow hover:shadow-xl transition duration-300 text-center border border-green-900">
+            <img src="duplikat-indomie-goreng_43.jpeg" alt="Indomie Telur" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-semibold text-yellow-300 mb-2">Indomie Telur</h3>
+            <p class="text-gray-300 mb-2">Indomie rebus hangat dengan telur setengah matang.</p>
+            <span class="text-lg font-bold text-yellow-400">Rp12.000</span>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-xl shadow hover:shadow-xl transition duration-300 text-center border border-green-900">
+            <img src="083078300_1589462572-shutterstock_435468841.webp" alt="Teh Manis" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-semibold text-yellow-300 mb-2">Teh Manis</h3>
+            <p class="text-gray-300 mb-2">Teh manis hangat atau dingin yang menyegarkan hari Anda.</p>
+            <span class="text-lg font-bold text-yellow-400">Rp5.000</span>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-xl shadow hover:shadow-xl transition duration-300 text-center border border-green-900">
+            <img src="21348d94-6737-4329-87cc-7bfc04af4e58_Go-Biz_20230318_010052.jpeg" alt="Roti Bakar" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-semibold text-yellow-300 mb-2">Roti Bakar</h3>
+            <p class="text-gray-300 mb-2">Roti bakar dengan berbagai topping manis dan gurih.</p>
+            <span class="text-lg font-bold text-yellow-400">Rp10.000</span>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-xl shadow hover:shadow-xl transition duration-300 text-center border border-green-900">
+            <img src="maxresdefault.jpg" alt="Pisang Goreng Nugget" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-semibold text-yellow-300 mb-2">Pisang Goreng Nugget</h3>
+            <p class="text-gray-300 mb-2">Pisang goreng krispi dengan topping kekinian.</p>
+            <span class="text-lg font-bold text-yellow-400">Rp10.000</span>
+          </div>
+
+          <div class="bg-gray-700 p-6 rounded-xl shadow hover:shadow-xl transition duration-300 text-center border border-green-900">
+            <img src="068542600_1639192233-potato_wedges.webp" alt="Kentang Goreng" class="w-full h-48 object-cover rounded-md mb-4">
+            <h3 class="text-xl font-semibold text-yellow-300 mb-2">Kentang Goreng</h3>
+            <p class="text-gray-300 mb-2">Cemilan kentang goreng gurih renyah untuk teman ngobrol.</p>
+            <span class="text-lg font-bold text-yellow-400">Rp10.000</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Kontak -->
+    <section id="kontak" class="section bg-gray-800 py-20 text-gray-100">
+      <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-yellow-400 mb-10">📬 Hubungi Kami</h2>
+        <div class="max-w-md mx-auto bg-gray-700 p-6 rounded-xl shadow text-center border border-green-900">
+          <p class="mb-3">📍 <strong>Jl. Kopi Santuy No. 88, Jakarta</strong></p>
+          <p class="mb-2">📞 0812-1418-6832</p>
+          <p>📧 warkopsantuy@email.com</p>
+          <a href="https://wa.me/6281214186832?text=Halo%20Warkop%20Santuy%2C%20saya%20ingin%20memesan%20menu%20anda." target="_blank" class="inline-block mt-6 bg-green-600 hover:bg-green-700 text-white font-semibold py-2 px-4 rounded-full transition duration-300">
+            💬 Pesan via WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-green-900 text-white py-6 text-center">
+    <p>&copy; 2025 Warkop Santuy. Nongkrong Asri, Rasa Tradisi 🍃</p>
+  </footer>
+
+  <!-- Script Navigasi Horizontal -->
+  <script>
+    function scrollToSection(index) {
+      const container = document.getElementById('horizontalContainer');
+      const sectionWidth = window.innerWidth;
+      container.style.transform = `translateX(-${index * sectionWidth}px)`;
+    }
+  </script>
+
+</body>
+</html>
